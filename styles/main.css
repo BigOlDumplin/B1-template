@@ -102,6 +102,7 @@ article:last-of-type{
 }
 
 article h2{
+  text-shadow: 0 0 0 #FCFCFC, -1px -1px 0 #FCFCFC, 1px -1px 0 #FCFCFC, -1px 1px 0 #FCFCFC, 1px 1px 0 #FCFCFC;
   margin: 0;
   padding: 1.5em;
   border-left: none;
@@ -120,6 +121,28 @@ article h2.rides{
 }
 article h2.open-forever{
   background-image: url('../images/open-james-lee.jpg');
+}
+
+.emphasize{
+  border-left: 5px solid #27AE60;
+  box-shadow: 1px 0 5px #27AE60;
+}
+
+.emphasize h2{
+  margin: 0;
+  border-left: 0px solid red;
+}
+
+.product-mok p{
+  margin: 0px;
+}
+
+.product-mok button{
+  font-weight: bold;
+}
+
+.product-mok{
+  display: flex;
 }
 
 .product{
@@ -141,6 +164,11 @@ article h2.open-forever{
   margin: 0 auto;
 }
 
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
 button{
   width: 100%;
   margin-top: 1em;
@@ -151,11 +179,19 @@ button{
   font-weight: bold;
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 .payment-option{
   height: 64px;
 }
 
-.sidy-by-side{
+.side-by-side{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .description{
@@ -186,7 +222,18 @@ footer{
 */
 
 @media (max-width: 480px) {
+  .hidden-on-lg{
+    display: block
+  }
 
+  .hidden-on-sm{
+    display: none
+  }
+
+  .side-by-side{
+    display: block;
+    text-align: center;
+  }
 }
 
 /* 
@@ -199,14 +246,6 @@ footer{
     margin: 0 auto;
     width: 256px;
   }
-
-  .row{
-    flex-direction: column;
-  }
-  .sidy-by-side{
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 /*
@@ -214,11 +253,11 @@ footer{
 */
 @font-face {
   font-family: 'Heartbeat';
-  src:  url('fonts/heartbeat.eot') format('eot'),
-        url('fonts/heartbeat.otf') format('otf'),
-        url('fonts/heartbeat.woff') format('woff'),
-        url('fonts/heartbeat.svg') format('svg'),
-        url('fonts/heartbeat.ttf') format('ttf');
+  src:  url('../fonts/heartbeat.eot') format('eot'),
+        url('../fonts/heartbeat.otf') format('otf'),
+        url('../fonts/heartbeat.woff') format('woff'),
+        url('../fonts/heartbeat.svg') format('svg'),
+        url('../fonts/heartbeat.ttf') format('ttf');
 }
 
 /*
